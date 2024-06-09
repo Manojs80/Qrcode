@@ -8,11 +8,11 @@ const routes = require('./routes/router')
 
 app.use('/',routes)
 
-
+require('dotenv').config()
 
 require('./db')
 
-app.listen(2345,()=>{
+app.listen(process.env.PORT,()=>{
     console.log('listening on' + 2345)
 })
 app.get('/',async(req,res)=>{

@@ -3,7 +3,7 @@ const studentScheme = new mongoose.Schema({
      name:{
           type:String,
           required:true,
-          minlength: [6,'Please enter the morethan 5 characters']
+          minlength: [3,'Please enter the morethan 5 characters']
      },
      age :Number,
      email:{
