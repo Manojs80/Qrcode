@@ -24,19 +24,20 @@ QRCode.toString(stringdata,{type:'terminal'},
  
     // Printing the generated code
     console.log(QRcode)
-	res.status(200).send('SUCCESSFULLY create Qrcode ' )
+	//res.status(200).send(`SUCCESSFULLY create Qrcode ${QRcode}` )
 })
 
 // Converting the data into base64 
 QRCode.toDataURL(stringdata, function (err, code) {
 	
 	if(err) return console.log("error occurred")
-
+		res.status(200).send(`SUCCESSFULLY create Qrcode ${code}`)
+	
 	// Printing the code
 	console.log(code)
-
 })
 }
+
 
 
 module.exports = qrcodegenerate
